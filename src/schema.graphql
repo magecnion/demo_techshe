@@ -1,0 +1,43 @@
+type Query {
+  bebidas: [Bebida]
+  comida(nombre: String!): Comida
+}
+
+type Mutation {
+  addBebida(bebida: BebidaInput): Bebida,
+  addComida(comida: ComidaInput): Comida
+}
+
+type Bebida {
+  id: ID
+  nombre: String
+  alcohol: Boolean
+}
+
+type Comida {
+  id: ID
+  nombre: String
+  tipo: String
+  ingredientes: [Ingrediente]
+}
+
+type Ingrediente {
+  id: ID
+  nombre: String
+  gluten: Boolean
+  precio: Int
+  origen: [String]
+}
+
+input BebidaInput {
+  id: ID
+  nombre: String
+  alcohol: Boolean
+}
+
+input ComidaInput {
+  id: ID
+  nombre: String
+  tipo: String
+  ingredientes: [String]
+}

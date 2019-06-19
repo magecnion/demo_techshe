@@ -1,0 +1,13 @@
+{
+  "name": "graphql-server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "graphpack": "^1.0.9"
+  },
+  "scripts": {
+    "dev": "graphpack",
+    "build": "graphpack build"
+  }
+}
